@@ -101,10 +101,9 @@ public class CollectionQuestGiver : QuestGiver
     {
         if(animal == Animals.Tavern)
         {
-
             dialogueRunner.VariableStorage.SetValue($"${animal}quest_count", KeysNeeded);
         }
-        if (SuckQuest)
+        else if (SuckQuest)
         {
             dialogueRunner.VariableStorage.SetValue($"${animal}quest_count", SucksNeeded);
         }

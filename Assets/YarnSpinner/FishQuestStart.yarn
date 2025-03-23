@@ -8,5 +8,10 @@ Fish: Whats up slimes!, Bet you don't get to see flying fish a lot! all the othe
 Fish: But look I'm a fish and what can I say, I'm afraid of the net
 Fish: hehe....
 Fish: *cough* 
-Fish: Sorry this quest is broke we didnt have time to finish it, feel free to suck all the rabbits
+Fish: To be really good at basketball you have to be really big, and I'm just from another pond man I can't get that big can you sub in for me and I'll give you key in return
+-> Slimes: Sure thing, what do you need Fish?
+    <<set $Fishquest_status = "started">>
+    Fish: Great! can you please get taller for me there should be {$Fishquest_count} slimes around here to do it
+-> Slimes: Not right now were busy, sorry.
+    Fish: All good, come back soon!
 ===
