@@ -9,8 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenuScene.unity
     guid: a5fbda45d68c90b489c1c0caa9b29388
   - enabled: 1
+    path: Assets/Scenes/MultiplayerLobby.unity
+    guid: 6c2e37fd563305d48b221147f621968f
+  - enabled: 1
     path: Assets/Scenes/TheLevel.unity
     guid: 58483dc2719433742bcd8728e0d6762d
+  - enabled: 1
+    path: Assets/Scenes/TheLevelMultiplayer.unity
+    guid: ba37398567e6dd44d9939bf69c7e82f0
   - enabled: 1
     path: Assets/Scenes/TavernScene.unity
     guid: 016c05c09c9eee846a88ac1aa339572b
