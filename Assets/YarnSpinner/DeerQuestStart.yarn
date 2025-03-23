@@ -1,0 +1,17 @@
+﻿title: DeerQuestStart
+tags: quests
+position: -28, -290
+---
+<<declare $Deerquest_status = "not_started">>
+<<declare $Deerquest_amount = 0>>
+<<declare $Deerquest_count = 0>>
+Deer: Hey there slimes!, All the other animals are mad at me becaue I couldn't keep their super secret
+Deer: Look what can I say, I just buckle under the pressure...
+Deer: hehe....
+Deer: anyway could you help me collect some carrots to make a nice stew for them?
+-> Slimes: Sure thing, what do you need Deer?
+    <<set $Deerquest_status = "started">>
+    Deer: Great! can you please get all the carrots back for me, should be {$Deerquest_count} around here
+-> Slimes: Not right now were busy, sorry.
+    Deer: All good, come back soon!
+===

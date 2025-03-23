@@ -1,0 +1,24 @@
+﻿title: SquidQuestComplete
+tags: quests
+---
+<<if $Squidquest_status == "started">>
+Squid: Have you brought me that yogurt?
+-> Slimes: Yeah, we got them right here Squid!
+    <<if $Squidquest_amount < $Squidquest_count>>
+        Squid: This isn't enough I'm going to need at least {$Squidquest_amount} yogurt to please my wife!
+    <<elseif $Squidquest_amount == $Squidquest_count>>
+        <<set $Squidquest_status = "completed">>
+        Squid: Thanks for all the Yogurt, I'll make sure my wife gets it!
+        Squid: Here's a key for your troubles
+        <<give_reward QuestGiverSquid>>
+    <<endif>>
+-> Slimes: Not yet, were still missing some
+    Squid: Come back when you've got all the yogurt!
+<<elseif $Squidquest_status == "completed">>
+    Squid: thanks for helping me with those yogurt!
+<<else>>
+    Squid: You already knew I needed all that yogurt! My wife is going to be so happy!
+    Squid: Here's a key for your troubles
+    <<give_reward QuestGiverSquid>>
+<<endif>>
+===

@@ -1,0 +1,12 @@
+﻿title: FishQuestStart
+tags: quests
+---
+<<declare $Fishquest_status = "not_started">>
+<<declare $Fishquest_amount = 0>>
+<<declare $Fishquest_count = 0>>
+Fish: Whats up slimes!, Bet you don't get to see flying fish a lot! all the other animals are mad at me because i wouldn't take part in the annual basketball game
+Fish: But look I'm a fish and what can I say, I'm afraid of the net
+Fish: hehe....
+Fish: *cough* 
+Fish: Sorry this quest is broke we didnt have time to finish it, feel free to suck all the rabbits
+===

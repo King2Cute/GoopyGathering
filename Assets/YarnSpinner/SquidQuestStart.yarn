@@ -1,0 +1,16 @@
+﻿title: SquidQuestStart
+tags: quests
+---
+<<declare $Squidquest_status = "not_started">>
+<<declare $Squidquest_amount = 0>>
+<<declare $Squidquest_count = 0>>
+Squid: Howdy slimes can you help me with something, I was suppose to go get my wife some yogurt... to eat maybe.... for the dessert shes making
+Squid: I was suppose to do it myself but I'm to much of a procrastINKator
+Squid: hehe....
+Squid: Anyway can you help me collect the yogurt? My wife is pretty pissed at me.
+-> Slimes: Yeah your wife is pretty cool, we'll do that
+    Squid: Sweet they should be {$Squidquest_count} amount around here somewhere
+    <<set $Squidquest_status = "started">>
+-> Slimes: Sorry not right now were currently busy
+    Squid: But my wife....
+===

@@ -1,0 +1,16 @@
+﻿title: MonkeyQuestStart
+tags: quests
+---
+<<declare $Monkeyquest_status = "not_started">>
+<<declare $Monkeyquest_amount = 0>>
+<<declare $Monkeyquest_count = 0>>
+Monkey: Hey there slimes!, My stash of bananas have gone off they seem to be tasting rather orangatangy
+Monkey: The smell of the rotting bananas has been making all the animals angry
+Monkey: Can you go and Chimpan-see if you can find any more for my stash!
+Monkey: hehe....
+-> Slimes: Sure thing, please stop with the puns
+    <<set $Monkeyquest_status = "started">>
+    Monkey: Great! you should be looking for {$Monkeyquest_count} bananas around here
+-> Slimes: Not right now were busy, sorry.
+    Monkey: Damn did the puns get to you
+===

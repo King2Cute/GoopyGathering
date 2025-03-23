@@ -1,0 +1,24 @@
+﻿title: MonkeyQuestComplete
+tags: quests
+---
+<<if $Monkeyquest_status == "started">>
+Monkey: Did you find my bananas?
+-> Slimes: Yeah, we got them all!
+    <<if $Monkeyquest_amount < $Monkeyquest_count>>
+        Monkey: This isn't enough I'm going to need at least {$Monkeyquest_amount} bananas to fill up my hoard!
+    <<elseif $Monkeyquest_amount == $Monkeyquest_count>>
+        <<set $Monkeyquest_status = "completed">>
+        Monkey: Thanks for all the bananas, Donkey Kong will be proud.
+        Monkey: Here's a Mon-KEY for your troubles
+        <<give_reward QuestGiverMonkey>>
+    <<endif>>
+-> Slimes: Not yet, were still missing some
+    Monkey: Come back when you've got all the bananas!
+<<elseif $Monkeyquest_status == "completed">>
+    Monkey: Thanks for all the bananas, Donkey Kong will be proud.
+<<else>>
+    Monkey: Thanks for all the bananas, Donkey Kong will be proud.
+    Monkey: Here's a Mon-KEY for your troubles
+    <<give_reward QuestGiverMonkey>>
+<<endif>>
+===

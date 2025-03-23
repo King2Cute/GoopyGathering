@@ -1,0 +1,22 @@
+﻿title: TavernQuestComplete
+tags: quests
+---
+<<if $Tavernquest_status == "started">>
+Tavern: Have you been able to get those shiny keys for me?
+-> Slimes: Yeah, we got them right here Tavern!
+    <<if $Tavernquest_amount < $Tavernquest_count>>
+        Tavern: I think you're still missing some keys, you have {$Tavernquest_amount}, there should be {$Tavernquest_count}
+    <<elseif $Tavernquest_amount == $Tavernquest_count>>
+        <<set $Tavernquest_status = "completed">>
+        Tavern: thanks for collecting all those keys for me, I've gathered everyone in the tavern come have a drink!
+        <<give_reward QuestGiverTavern>>
+    <<endif>>
+-> Slimes: Not yet, were still missing some
+    Tavern: Come back when you've collected them all!
+<<elseif $Tavernquest_status == "completed">>
+    Tavern: Thanks for collecting all those keys for me! The taverns open now for a drink!
+<<else>>
+    Tavern: Damn, you already collected all the keys, nice! Come have a drink in the tavern!
+    <<give_reward QuestGiverTavern>>
+<<endif>>
+===

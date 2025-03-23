@@ -1,0 +1,25 @@
+﻿title: DeerQuestComplete
+tags: quests
+position: -28, -290
+---
+<<if $Deerquest_status == "started">>
+Deer: Have you brought me those carrots?
+-> Slimes: Yeah, we got them right here Deer!
+    <<if $Deerquest_amount < $Deerquest_count>>
+        Deer: nah you don't why you lieing, go collect more you've currently collected {$Deerquest_amount} carrots
+    <<elseif $Deerquest_amount == $Deerquest_count>>
+        <<set $Deerquest_status = "completed">>
+        Deer: Thank you!, they can't be mad at me now!
+        Deer: Here's a key for your troubles
+        <<give_reward QuestGiver>>
+    <<endif>>
+-> Slimes: Not yet, were still missing some
+    Deer: Come back when you've got all the carrots!
+<<elseif $Deerquest_status == "completed">>
+    Deer: thanks for helping me with those carrots!
+<<else>>
+    Deer: Thanks, you're a mind reader I needed those carrots!
+    Deer: Here's a key for your troubles
+    <<give_reward QuestGiver>>
+<<endif>>
+===

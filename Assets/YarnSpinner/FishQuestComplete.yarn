@@ -1,0 +1,26 @@
+﻿title: FishQuestComplete
+tags: quests
+---
+<<if $Fishquest_status == "started">>
+Fish: Have you been able to get any bigger?
+-> Slimes: Yeah, we got them right here Fish!
+    <<if $Fishquest_amount < $Fishquest_count>>
+        Fish: Let me check your big stat progress
+        Fish: you've sucked off {$Fishquest_amount} slimes, You need to be at least {$Fishquest_count} slimes tall
+    <<elseif $Fishquest_amount == $Fishquest_count>>
+        <<set $Fishquest_status = "completed">>
+        Fish: Holy Smackeronies! You're so tall, please don't eat me you'll get Salmon-ella poisoning
+        Fish: Hehe....
+        Fish: Here's a key for your troubles buddy
+        <<give_reward QuestGiverFish>>
+    <<endif>>
+-> Slimes: Not yet, were still missing some
+    Fish: Come back when you're really tall!
+<<elseif $Fishquest_status == "completed">>
+    Fish: Thanks for gaining all that tall stat!
+<<else>>
+    Fish: Wow how did you get that tall!? 
+    Fish: Here's a key for your troubles
+    <<give_reward QuestGiverFish>>
+<<endif>>
+===
